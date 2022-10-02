@@ -18,6 +18,7 @@ if track is None:
     quit() 
 else:
     result = re.sub('^(.+Lyrics)', "", track.lyrics)
-    result = re.sub('(\d.+Embed)$', "", track.lyrics)
+    result = re.sub('(\d.+Embed)$', "", result)
+    result = re.sub('You might also likeEmbed$', "", result)
     print(result)
     
